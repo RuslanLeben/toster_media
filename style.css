@@ -1,0 +1,318 @@
+@font-face 
+{
+	font-family: 'Gotham Pro';
+  	src: url('fonts/gothampro_medium.ttf');
+}
+@font-face 
+{
+	font-family: 'Gotham Light';
+  	src: url('fonts/gothampro_light.ttf');
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Gotham Pro;
+	color: #2C2B31;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+}
+a
+{
+	font-family: 'Gotham Light';
+	color: #37D997;
+}
+b
+{
+	font-family: Gotham Pro;
+}
+.app
+{
+	width: 390px;
+	height: 1096px;
+	background: #F0F0F0;
+}
+
+/*HEADER*/
+.header
+{
+	background: #F19D2F;
+	height: 33px;
+
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.header-text
+{
+	font-size: 12.69px;
+	font-weight: 400;
+	line-height: 12px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+
+/*LOGOTYPE*/
+.logotype
+{
+	position: relative;
+	height: 92px;
+	background: #FFD1AC;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	gap: 10px;
+}
+.circle
+{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #F19D2F;
+	border-radius: 50%;
+    top: 27px;
+    left: 235px;
+}
+.logotype .logo-description
+{
+	font-size: 13.47px;
+	text-align: center;
+}
+
+
+/*PREVIEW*/
+.preview
+{
+	position: relative;
+	background: url('images/preview.png');
+	height: 281px;
+	padding: 14px;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.preview-limited, .preview-price
+{
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.preview-limited
+{
+	padding: 8px;
+	gap: 10px;
+	background: #F19D2F;
+}
+.preview-limited .text
+{
+	color: white;
+	font-size: 10.6px;
+}
+.preview-limited .limited-time
+{
+	color: white;
+	font-size: 21.25px;
+}
+.preview-price
+{
+	padding: 7px;
+	gap: 8px;
+	background: #37D997;
+}
+.preview-price .old-price
+{
+	text-decoration: line-through 3.5px #E27500;
+	color: white;
+	font-size: 18.08px;
+}
+.preview-price .new-price
+{
+	color: white;
+	font-size: 22.3px;
+}
+
+/*MAIN*/
+.main
+{
+	padding: 11px 16px 41px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+.gates
+{
+	position: relative;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.gates span
+{
+	font-size: 12.07px;
+	font-family: 'Gotham Light';
+}
+.product-name
+{
+	text-align: left;
+	font-size: 19.17px;
+	text-transform: uppercase;
+}
+
+
+.choosen-image
+{
+	height: 232px;
+	border-radius: 20px;
+	background: black;
+}
+.selections-image
+{
+	display: flex;
+	gap: 12px;
+}
+.variant-image
+{
+	flex-grow: 1;
+	height: 66px;
+	border-radius: 10px;
+	background-size: cover;
+	cursor: pointer;
+}
+.choose
+{
+	opacity: 0.5;
+}
+
+
+.description p
+{
+	font-family: 'Gotham Light';
+	font-size: 15.29px;
+}
+.description p:not(.description-gates):after
+{
+	content: '';
+
+	display: inline-block;
+	margin-left: 5px;
+	width: 16px;
+	height: 16px;
+
+	background-image: url('images/flag.png');
+	background-size: cover;
+}
+.description
+{
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+
+.properties
+{
+	display: flex;
+	gap: 16px;
+}
+.prop-color, .prop-size
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.prop-color p, .prop-size p
+{
+	text-align: center;
+	font-family: 'Gotham Light';
+	font-size: 10px;
+}
+.properties select
+{
+	margin-top: 4px;
+	border: none;
+	height: 50px;
+	border-radius: 15px;
+
+	font-size: 21.69px;
+	text-align: center;
+	position: relative;
+/*	text-transform: uppercase;*/
+}
+
+
+.button-buy-now
+{
+	padding: 12px 18px;
+	background: #37D997;
+	color: white;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

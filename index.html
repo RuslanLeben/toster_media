@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сайт</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="app">
+
+		<div class="header">
+			<p class="header-text">
+				🇿🇦 SPECIAL OFFER + FREE DELIVERY 2-4 DAYS IN SA 🇿🇦
+			</p>
+		</div>
+
+		<div class="logotype">
+			<div class="circle"></div>
+			<img src="images/logo.png">
+			<p class="logo-description">orthopedic slippers</p>
+		</div>
+
+		<div class="preview">
+			<div class="preview-limited">
+				<p class="text">LIMITED OFFER</p>
+				<p class="limited-time" id="timer">04:51:16</p>
+			</div>
+
+			<div class="preview-price">
+				<p class="old-price">R 250.00</p>
+				<p class="new-price">R 160.00</p>
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="gates">
+				<span class="excelent">Excelent 4.8/5</span>
+				<div class="trustpilot"><img src="images/star.png"><img src="images/trust.png"></div>
+				<span class="bst-selling"><a href="#">best selling</a></span>
+			</div>
+
+			<p class="product-name">Orthopedic Slippers</p>
+
+			<div class="choosen-image"></div>
+			<div class="selections-image">
+				<div class="variant-image choose"></div>
+				<div class="variant-image"></div>
+				<div class="variant-image"></div>
+				<div class="variant-image"></div>
+			</div>
+
+			<div class="description">
+				<p><b>Fast Delivery:</b> 2-4 days from SA</p>
+				<p><b>In Stock:</b> Shipping from Johannesburg</p>
+				<p class="description-gates">
+					<img src="images/gate.png">
+					<img src="images/gate.png">
+					<img src="images/gate.png">
+					<img src="images/gate.png">
+					<img src="images/gate.png">
+					(10)
+				</p>
+			</div>
+
+			<div class="properties">
+				<div class="prop-color">
+					<p class="prop-text">color</p>
+					<select>
+						<option>Black</option>
+						<option>Orange</option>
+						<option>Pink</option>
+						<option>Yellow</option>
+					</select>
+				</div>
+				<div class="prop-size">
+					<p class="prop-text">size</p>
+					<select>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+			</div>
+
+			<a href="https://www.youtube.com/" target="_blank">
+				<div class="button-buy-now">BUY NOW</div>
+			</a>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		const timer = document.getElementById('timer')
+		const startTime = 17475
+
+		let currentTime = startTime
+		function getHours(seconds) 
+		{
+			return Math.floor(seconds/3600)
+		}
+		function getMinute(seconds) 
+		{
+			return (Math.floor((seconds - getHours(seconds)*3600)/60))
+		}
+		function getSecond(seconds) 
+		{
+			const hourSec = getHours(seconds)*3600
+			const minSec = getMinute(seconds)*60
+			return (seconds - hourSec - minSec)
+		}
+
+		setInterval(()=>
+		{
+			timer.innerText = 
+			String(getHours(currentTime)).padStart(2, "0") + ':' + 
+			String(getMinute(currentTime)).padStart(2, "0") + ':' + 
+			String(getSecond(currentTime)).padStart(2, "0");
+
+			currentTime--
+		},1000)
+
+
+
+		const selectImages = document.querySelectorAll('.variant-image')
+		const selectImage = document.querySelector('.choosen-image')
+		const url = 
+		[
+			'images/black.png',
+			'images/orange.png',
+			'images/pink.png',
+			'images/yellow.png',
+		]
+		selectImage.style.backgroundImage = 'url('+url[0]+')'
+		for(let i = 0; i < selectImages.length; i++)
+		{
+			selectImages[i].style.backgroundImage = 'url('+url[i]+')'
+			selectImages[i].addEventListener('click',()=>
+			{
+				selectImage.style.backgroundImage = 'url('+url[i]+')'
+				for(let item of selectImages)
+					item.style.opacity = '1'
+				selectImages[i].style.opacity = '.5'
+			})
+		}
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
